@@ -1,0 +1,135 @@
+{
+  "identity": {
+    "name": "E1",
+    "mission": "Create a living knowledge base that feels like a modern digital library—structured, intellectual, and inviting.",
+    "core_principles": [
+      "Content is King: The UI should recede; the knowledge should pop.",
+      "Structure over Decoration: Use grids and lines to organize information, not shadows.",
+      "The 'Paper' Feel: Digital interfaces should retain the warmth and readability of physical paper.",
+      "Interconnectedness: Visual cues should suggest links between topics."
+    ]
+  },
+  "design_system": {
+    "typography": {
+      "headings": {
+        "font_family": "Playfair Display, serif",
+        "weights": ["400", "700"],
+        "usage": "Use for all H1-H3 headings. Best in Sentence Case.",
+        "install_command": "Import via Google Fonts in index.css"
+      },
+      "body": {
+        "font_family": "Inter, sans-serif",
+        "weights": ["300", "400", "500", "600"],
+        "usage": "Use for all paragraphs, UI labels, and data.",
+        "install_command": "Already available or import via Google Fonts"
+      },
+      "code": {
+        "font_family": "JetBrains Mono, monospace",
+        "usage": "For code snippets and technical references."
+      }
+    },
+    "colors": {
+      "mode_strategy": "Hybrid",
+      "palette": {
+        "primary": {
+          "name": "Deep Teal",
+          "hex": "#0F4C5C",
+          "variable": "--primary",
+          "usage": "Brand identity, primary buttons, active states."
+        },
+        "secondary": {
+          "name": "Paper White",
+          "hex": "#F9F9F9",
+          "variable": "--background",
+          "usage": "Main background to reduce eye strain compared to pure white."
+        },
+        "accent": {
+          "name": "Highlighter Orange",
+          "hex": "#E36414",
+          "variable": "--accent",
+          "usage": "Call to actions, notification dots, important highlights."
+        },
+        "neutral": {
+          "text_primary": "#1A202C",
+          "text_secondary": "#4A5568",
+          "border": "#E2E8F0"
+        }
+      },
+      "dark_mode_palette": {
+        "background": "#0F1115",
+        "surface": "#1A1D23",
+        "text_primary": "#F7FAFC",
+        "border": "#2D3748"
+      }
+    },
+    "spacing": {
+      "scale": "Tailwind default",
+      "strategy": "Generous. Use p-8 to p-12 for section containers. p-6 for cards.",
+      "grid_gap": "gap-6 or gap-8"
+    },
+    "visual_enhancers": {
+      "borders": "1px solid var(--border). Prefer borders over shadows for depth.",
+      "shadows": "Minimal. Use 'shadow-sm' for subtle lift on hover only.",
+      "radius": "rounded-md (6px) or rounded-lg (8px). Avoid fully rounded/pill shapes for main containers.",
+      "textures": "Subtle noise overlay (opacity 0.03) on backgrounds recommended for 'paper' feel."
+    }
+  },
+  "components": {
+    "library": "shadcn/ui",
+    "icons": "lucide-react",
+    "styling_rules": [
+      "Buttons: Sharp corners or slightly rounded (rounded-md). No pill buttons.",
+      "Inputs: Flat background (bg-gray-50), clear border. No floating labels.",
+      "Cards: 'Cardless' look preferred for lists. Use borders between items (divide-y) rather than boxing everything."
+    ],
+    "specific_components": {
+      "navigation": "Sticky top bar, backdrop-blur-md, minimal height.",
+      "knowledge_block": "Border-left accent colored strip to denote category.",
+      "toast": "Use 'sonner' for notifications."
+    }
+  },
+  "layout_strategies": {
+    "marketing": {
+      "grid": "Bento Grid (Mode A). Mix text-heavy blocks with visual blocks.",
+      "hero": "Split screen or centered typography with abstract background elements.",
+      "features": "Alternating side-by-side (Zig-zag) with large imagery."
+    },
+    "dashboard": {
+      "grid": "High Density (Mode B). 3 or 4 column layout.",
+      "sidebar": "Collapsible, icon-heavy for space saving.",
+      "content_area": "Wide central column for reading, right sidebar for metadata/TOC."
+    }
+  },
+  "image_strategy": {
+    "source": "Unsplash / Pexels",
+    "style": "Realistic, candid academic settings or abstract geometric minimalism.",
+    "rules": [
+      "Avoid 'cheesy' stock photos of people looking at camera.",
+      "Use 'abstract geometric' for backgrounds to represent structure.",
+      "Use 'library/student' for human connection."
+    ],
+    "selected_images": {
+      "hero_background": "https://images.unsplash.com/photo-1770009971150-f50bc7d373a4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMHNoYXBlcyUyMG1pbmltYWxpc3QlMjB3aGl0ZSUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc0MjU3MDE1fDA&ixlib=rb-4.1.0&q=85",
+      "student_collaboration": "https://images.unsplash.com/photo-1758873268631-fa944fc5cad2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzQyNTcwMTZ8MA&ixlib=rb-4.1.0&q=85",
+      "library_focus": "https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "abstract_structure": "https://images.unsplash.com/photo-1770321428579-4d1ddcdf0225?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMHNoYXBlcyUyMG1pbmltYWxpc3QlMjB3aGl0ZSUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc0MjU3MDE1fDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons if missing.",
+    "Add 'Playfair Display' to the font imports in index.css.",
+    "Update tailwind.config.js to include the custom colors (Deep Teal, Paper White).",
+    "Use 'sonner' for all toast notifications.",
+    "Ensure all interactive elements have 'data-testid' attributes.",
+    "Implement a Dark Mode toggle in the navbar.",
+    "For the dashboard, prioritize the 'High Density Grid' layout."
+  ],
+  "UNIVERSAL_GUIDELINES": [
+    "Do not use generic centered layouts. Use asymmetry.",
+    "Create depth through z-index and subtle borders, not heavy shadows.",
+    "Avoid 'transition: all'. Animate specific properties.",
+    "Ensure high contrast for text (WCAG AA compliant).",
+    "Use generous padding (p-8+) for content containers.",
+    "NEVER use emoji characters as icons."
+  ]
+}
